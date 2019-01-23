@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.snowf.findingsatellites.MainActivity"
+    android:background="#38324E">
+
+    <RelativeLayout
+        android:layout_width="@dimen/rb_width"
+        android:layout_height="match_parent"
+        android:gravity="start"
+        android:background="@drawable/rectangle"
+        android:layout_marginTop="@dimen/common_margin"
+        android:layout_marginBottom="@dimen/common_margin"
+        android:layout_marginStart="@dimen/common_margin"
+        android:layout_marginEnd="@dimen/common_margin">
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/rb_text_height"
+            android:layout_marginTop="@dimen/common_margin"
+            android:layout_marginBottom="@dimen/common_margin"
+            android:layout_marginStart="@dimen/common_margin"
+            android:layout_marginEnd="@dimen/common_margin"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:textSize="@dimen/font_size"
+            android:textColor="#FFFFFF"
+            android:text="70000" />
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/rb_text_height"
+            android:layout_marginTop="@dimen/common_margin"
+            android:layout_marginBottom="@dimen/common_margin"
+            android:layout_marginStart="@dimen/common_margin"
+            android:layout_marginEnd="@dimen/common_margin"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:textSize="@dimen/font_size"
+            android:textColor="#FFFFFF"
+            android:text="200" />
+
+        <LinearLayout
+            android:layout_width="@dimen/rb_width"
+            android:layout_height="match_parent"
+            android:gravity="start"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/common_margin"
+            android:layout_marginEnd="@dimen/common_margin"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true">
+
+            <com.edmodo.rangebar.RangeBar xmlns:custom="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/rangeSeekBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:rotation="270"
+                custom:tickCount="15" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/common_margin"
+        android:layout_marginBottom="@dimen/common_margin"
+        android:layout_marginEnd="@dimen/common_margin"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/norad_block_height"
+            android:orientation="vertical"
+            android:padding="@dimen/common_margin"
+            android:layout_marginBottom="@dimen/common_margin"
+            android:background="@drawable/rectangle">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/common_margin">
+                <EditText
+                    android:id="@+id/norad_edit_text"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/norad_block_line_height"
+                    android:layout_weight="1"
+                    android:hint="Введите norad объекта"
+                    android:textColorHint="#ffffff"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/font_size"/>
+                <RelativeLayout
+                    android:layout_width="@dimen/button_size"
+                    android:layout_height="@dimen/button_size"
+                    android:layout_marginStart="@dimen/common_margin"
+                    android:layout_gravity="center"
+                    android:background="@drawable/circle">
+                    <com.example.snowf.findingsatellites.views.AddNoradButton
+                        android:layout_width="@dimen/button_image_size"
+                        android:layout_height="@dimen/button_image_size"
+                        android:layout_marginStart="@dimen/common_margin"
+                        android:background="@drawable/plus"
+                        android:id="@+id/norad_add_button"
+                        android:layout_centerInParent="true"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:scrollbars="none">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/norad_container"
+                    android:orientation="horizontal">
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hint_layout"
+            android:orientation="horizontal"
+            android:background="@drawable/user_hint">
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_size"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/common_margin">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+                <com.example.snowf.findingsatellites.views.SatelliteButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Спутники"
+                    android:id="@+id/satellite_button"
+                    android:textColor="@color/colorFon"
+                    android:background="@drawable/circle_left"
+                    android:textSize="@dimen/font_size"
+                    android:layout_weight="1"
+                    android:textAllCaps="false"/>
+                <com.example.snowf.findingsatellites.views.TrashButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Обломки"
+                    android:id="@+id/trash_button"
+                    android:textColor="@color/colorType"
+                    android:background="@drawable/circle_right_stroke"
+                    android:textSize="@dimen/font_size"
+                    android:layout_weight="1"
+                    android:textAllCaps="false"/>
+            </LinearLayout>
+            <Button
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:text="Поехали"
+                android:background="@drawable/circle"
+                android:backgroundTint="@color/colorShow"
+                android:textColor="@color/colorFon"
+                android:id="@+id/show_activity_button"
+                android:textSize="@dimen/font_size"
+                android:layout_marginStart="@dimen/common_margin"
+                android:textAllCaps="false"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

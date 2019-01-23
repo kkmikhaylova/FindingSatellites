@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#38324E</color>
+    <color name="colorPrimaryDark">#403A60</color>
+    <color name="colorAccent">#FF9750</color>
+
+    <color name="colorFon">#38324E</color>
+    <color name="colorLightFon">#403A60</color>
+    <color name="colorRangeBar">#8560C0</color>
+    <color name="colorNorad">#FF9750</color>
+    <color name="colorType">#49c2f9</color>
+    <color name="colorShow">#66ffa0</color>
+</resources>
